@@ -1,0 +1,79 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera and OCR Output</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Camera Feed</h1>
+        </div>
+        <div id="video-container">
+            <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Video Feed">
+            <button id="capture-btn" class="btn">Capture Image</button>
+        </div>
+        <div id="ocr-output" class="slide-out">
+            <h2>OCR Output</h2>
+            
+            <textarea id="text-area"></textarea>
+        </div>
+        
+        <button id="slide-btn" class="slide-btn">&gt;</button>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR and C++ Code Editor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>OCR and C++ Code Editor</h1>
+        </div>
+
+        <!-- Camera Feed Section -->
+        <div id="video-container">
+            <h2>Camera Feed</h2>
+            <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Video Feed">
+            <button id="capture-btn" class="btn">Capture Image</button>
+        </div>
+
+        <!-- Unified OCR and Code Editor Section -->
+        <div id="editor-container">
+            <div class="tab-container">
+                <button class="tab-btn active" id="ocr-tab">OCR Output</button>
+                <button class="tab-btn" id="code-tab">C++ Code</button>
+            </div>
+            <div class="editor-area-container">
+                <textarea id="editor-area" placeholder="Enter C++ code here or view OCR output"></textarea>
+                <button id="run-code-btn" class="btn">Run Code</button>
+            </div>
+        </div>
+
+        <!-- C++ Code Execution Output Section -->
+        <div id="code-output">
+            <h2>Code Execution Output</h2>
+            <textarea id="output-area" readonly></textarea>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+
+
+
