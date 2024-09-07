@@ -1,30 +1,3 @@
-/*document.getElementById('slide-btn').addEventListener('click', function() {
-    const ocrOutput = document.getElementById('ocr-output');
-    // Toggle the 'open' class
-    ocrOutput.classList.toggle('open');
-    // Change the button symbol depending on the panel state
-    this.innerHTML = ocrOutput.classList.contains('open') ? '&lt;' : '&gt;';
-});
-
-document.getElementById('capture-btn').addEventListener('click', function() {
-    fetch('/capture_ocr')
-        .then(response => response.json())
-        .then(data => {
-            const textArea = document.getElementById('text-area');
-            if (data.extracted_text) {
-                // Populate the text area with OCR output
-                textArea.value = data.extracted_text;
-                textArea.removeAttribute('readonly'); // Ensure it can be edited
-            } else {
-                textArea.value = 'Error capturing image or no text detected.';
-            }
-        })
-        .catch(err => console.error(err));
-});*/
-
-
-
-// Switch between OCR and C++ Code editor
 document.getElementById('ocr-tab').addEventListener('click', function() {
     const editorArea = document.getElementById('editor-area');
     this.classList.add('active');
